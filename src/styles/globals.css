@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .bottom-line {
+    @apply font-medium text-blue-500 before:absolute before:w-full before:-bottom-[3px] before:left-0 before:h-[2px] before:bg-blue-700
+  }
+}
+
+::-webkit-scrollbar {
+    width: 7px; /* Largura da barra de rolagem */
+}
+  
+  /* Estilizar a alça (o "polegar") da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background-color: #D1D5DB; /* Cor do polegar */
+    border-radius: 5px; /* Borda arredondada */
+}
+  
+  /* Estilizar a trilha (fundo) da barra de rolagem */
+::-webkit-scrollbar-track {
+    background-color: #fff; /* Cor da trilha */
+    border-radius: 12px; /* Borda arredondada */
+}
+.loader {
+  border: 4px solid rgb(229 231 235);
+  border-left-color: transparent;
+  border-radius: 50%;
+}
+
+.loader {
+  border: 4px solid rgb(229 231 235);
+
+  border-left-color: transparent;
+  width: 36px;
+  height: 36px;
+}
+
+.loader {
+  border: 4px solid rgb(229 231 235);
+  border-left-color: transparent;
+  width: 36px;
+  height: 36px;
+  animation: spin89345 1s linear infinite;
+}
+
+@keyframes spin89345 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader-2 {
+  width: 2.25em;
+  transform-origin: center;
+  animation: rotate4 2s linear infinite;
+ }
+ 
+ .loader-2 circle {
+  fill: none;
+  stroke: rgb(59 130 246);
+  stroke-width: 2;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: dash4 1.5s ease-in-out infinite;
+ }
+ 
+ @keyframes rotate4 {
+  100% {
+   transform: rotate(360deg);
+  }
+ }
+ 
+ @keyframes dash4 {
+  0% {
+   stroke-dasharray: 1, 200;
+   stroke-dashoffset: 0;
+  }
+ 
+  50% {
+   stroke-dasharray: 90, 200;
+   stroke-dashoffset: -35px;
+  }
+ 
+  100% {
+   stroke-dashoffset: -125px;
+  }
+ }
+ 
