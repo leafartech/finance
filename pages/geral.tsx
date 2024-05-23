@@ -48,9 +48,13 @@ export default function Geral() {
                 namesHlp[1].push(movimentacao.id)
             }
         })
-        setIncome(...[incomeHlp])
-        setExpense(...[expenseHlp])
-        setName(...[namesHlp])
+        let mask = [...incomeHlp]
+        setIncome(mask)
+        mask = [...expenseHlp]
+        setExpense(mask)
+
+        let mask2 = [...namesHlp]
+        setName(mask2)
         setChartData([incomeQtd.length, expenseQtd.length])
     }, [data])
 
@@ -91,7 +95,7 @@ export default function Geral() {
                             </Text>
                             <div className="flex flex-col sm:flex-row gap-3 justify-between">
                                 {data.finance.goals.filter((goal, index) => index <= 1).map((goal, index: number) => (
-                                    <div className="w-full h-44">
+                                    <div className="w-full h-44" key={index}>
                                         <RadialChart
                                             progress={goal.progress}
                                             title={goal.id}
